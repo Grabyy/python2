@@ -7,6 +7,9 @@ Questions et points à aborder ou à traiter dans le notebook :
 
 Reponse
 
+Avec l'aide du framework de test PyTest, les utilisateurs peuvent créer des programmes de test dans le langage de programmation Python. Il est utile d'écrire des cas de test simples et évolutifs pour les bases de données, les API ou les interfaces utilisateur. PyTest est surtout utilisé pour créer des tests d'API. Il est utile d'écrire des tests, des tests unitaires simples aux tests fonctionnels complexes.
+
+Les tests logiciels constituent une part importante de la culture du développement logiciel Python. Python est un langage à typage dynamique plutôt qu'un langage à typage statique, les tests sont donc encore plus cruciaux pour garantir l'exactitude du programme.
 
 
 •	Quand a été créée cette bibliothèque, de quand date la dernière version (quel est le numéro de la dernière version) ?
@@ -29,7 +32,18 @@ Reponse
 
 Reponse
 
+Une seule personne ou même une grande équipe ne peut pas suivre tous les changements et les relations entre les changements à mesure que la taille de la base de code du logiciel augmente. 
 
+Une fois qu'ils ont dépassé le stade du prototype rudimentaire, les tests automatisés sont la seule technique qui s'est avérée efficace pour créer des logiciels fiables. De nombreux échecs importants dans le développement de logiciels peuvent être attribués à l'insuffisance ou à l'absence totale de tests.
+
+• Pourquoi utiliser PyTest ? NEW QUESTION
+
+. Très facile à prendre en main grâce à sa syntaxe simple et facile.
+. Peut exécuter des tests en parallèle.
+. Peut exécuter un test spécifique ou un sous-ensemble de tests.
+. Détection automatique des tests
+. Sauter des tests
+. Source ouverte
 
 
 
