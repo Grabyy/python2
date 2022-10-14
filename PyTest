@@ -3,9 +3,36 @@ Exploration des tests en Python et découverte de la bibliothèque pytest.
 
 Questions et points à aborder ou à traiter dans le notebook :
 •	Qu’est-ce que pytest ?
+
+
+Reponse
+
+
+
 •	Quand a été créée cette bibliothèque, de quand date la dernière version (quel est le numéro de la dernière version) ?
+
+
+Reponse
+
+
+
 •	Comment installer cette bibliothèque (dans un environnement conda) ?
+
+
+
+Reponse
+
+
+
 •	Pourquoi tester son code ?
+
+
+Reponse
+
+
+
+
+
 •	Différences entre test unitaire et test d’intégration ?
 •	Expliquer comment fonction pytest.
 •	Expliquer ce que sont les fixtures.
