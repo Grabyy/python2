@@ -1,0 +1,40 @@
+
+------------- Doc/tuto -------------
+
+
+===== Pythest official documentation :
+
+- https://docs.pytest.org/en/7.1.x/contents.html
+
+
+==== Tuto pytest acervolima:
+
+- https://fr.acervolima.com/tests-logiciels-automatises-avec-python/
+
+
+==== RealPython:
+
+- https://realpython.com/pytest-python-testing/
+
+==== Test Unitaire:
+
+- https://www.youtube.com/watch?v=apgReCCAQr4
+
+
+==== Fullstack Python
+
+- https://www.fullstackpython.com/testing.html
+- https://jacobian.org/2016/nov/27/getting-started-with-pytest/
+
+
+
+------------- Cour -------------  
+
+===== Test automation university:
+
+- https://testautomationu.applitools.com/pytest-tutorial/
+
+
+==== Openclassrooms:
+
+- https://openclassrooms.com/fr/courses/4425126-testez-votre-projet-avec-python/4435144-ajoutez-des-tests-avec-pytest
