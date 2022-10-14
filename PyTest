@@ -1,0 +1,27 @@
+Pytest » Les tests avec Python
+Exploration des tests en Python et découverte de la bibliothèque pytest.
+
+Questions et points à aborder ou à traiter dans le notebook :
+•	Qu’est-ce que pytest ?
+•	Quand a été créée cette bibliothèque, de quand date la dernière version (quel est le numéro de la dernière version) ?
+•	Comment installer cette bibliothèque (dans un environnement conda) ?
+•	Pourquoi tester son code ?
+•	Différences entre test unitaire et test d’intégration ?
+•	Expliquer comment fonction pytest.
+•	Expliquer ce que sont les fixtures.
+
+Questions et points à aborder ou à traiter dans le script :
+•	Construire des tests unitaires et d’intégration pour le script du mini-projet « Mots anglais dans le protéome humain ».
+
+Contraintes : 
+•	Utilisation de la bibliothèque pytest.
+
+Livrables : 
+•	Un notebook Jupyter (tuto.ipynb).
+•	Un script Python (words_in_proteome.py) qui implémente le mini-projet « Mots anglais dans le protéome humain ».
+•	Un script Python (demo.py) qui implémente les différents tests
+
+Ressources :
+•	vidéo : PyTest Tutorial.
+•	article de blog : Testing Python Applications with Pytest.
+•	script du mini-projet : « Mots anglais dans le protéome humain ».
