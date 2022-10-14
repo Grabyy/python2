@@ -1,68 +1,55 @@
-Pytest » Les tests avec Python
-Exploration des tests en Python et découverte de la bibliothèque pytest.
+                            ----------------------------------------- Question pytest -----------------------------------------               
 
-Questions et points à aborder ou à traiter dans le notebook :
-•	Qu’est-ce que pytest ?
+====== Qu’est-ce que pytest ? ======
 
-
-Reponse
-
-Avec l'aide du framework de test PyTest, les utilisateurs peuvent créer des programmes de test dans le langage de programmation Python. Il est utile d'écrire des cas de test simples et évolutifs pour les bases de données, les API ou les interfaces utilisateur. PyTest est surtout utilisé pour créer des tests d'API. Il est utile d'écrire des tests, des tests unitaires simples aux tests fonctionnels complexes.
-
-Les tests logiciels constituent une part importante de la culture du développement logiciel Python. Python est un langage à typage dynamique plutôt qu'un langage à typage statique, les tests sont donc encore plus cruciaux pour garantir l'exactitude du programme.
+Le framework de test PyTest, donne l'oportunité aux utilisateurs de créer des programmes permettant de tester des script Python. 
+Il est utile d'écrire des cas de test simples et évolutifs pour les bases de données, les API (interface logiciel-logiciel) ou les interfaces utilisateur. 
+PyTest est surtout utilisé pour créer des tests d'API. Pytest permet d'écrire de nombreux des tests unitaires simples aux tests fonctionnels complexes
+(detailler sur ce notebook). Le tests logiciels constituent une part importante de la culture du développement logiciel Python. Python etant un langage à 
+typage dynamique et non statique, cela rend les tests essentiel pour eviter les erreur de typage et garanti l'exactitude du programme.
 
 
-•	Quand a été créée cette bibliothèque, de quand date la dernière version (quel est le numéro de la dernière version) ?
+====== Quand a été créée cette bibliothèque, de quand date la dernière version (quel est le numéro de la dernière version) ? ======
+
+La premiere pierre a l'édifice a été poser en janvier 2007. La derniere version pytest : 7.1.3, est sortie le 31-08-2022
 
 
-Reponse
+====== Comment installer cette bibliothèque (dans un environnement conda) ? ======
+
+Sur conda il suffit d'exécuter la commande : conda install -c anaconda pytest
 
 
+====== Pourquoi tester son code ? ======
 
-•	Comment installer cette bibliothèque (dans un environnement conda) ?
+A mesure qu'un projet de developpement grandit, il devient extremement difficile de suivre tous les ajout, supression et modification faite sur ce projet,
+d'autan plus quand un nombre conséquent de personne travaille dessus en meme temps. Les tests automatisés sont la seule technique qui s'est avérée efficace 
+pour assurer une cohérance dans le developpement et créer des logiciels fiables. De nombreux échecs développementaux de logiciels peuvent être attribués à 
+l'insuffisance ou à l'absence totale de tests. Tester son logiciel est donc esentielle si l'on souhaite se prévenir de nombreux probleme qui peuvent 
+subvenir au cour du developpement et lors de sa sortie.
 
+====== Pourquoi utiliser PyTest ? ====== NEW QUESTION
 
-
-Reponse
-
-
-
-•	Pourquoi tester son code ?
-
-
-Reponse
-
-Une seule personne ou même une grande équipe ne peut pas suivre tous les changements et les relations entre les changements à mesure que la taille de la base de code du logiciel augmente. 
-
-Une fois qu'ils ont dépassé le stade du prototype rudimentaire, les tests automatisés sont la seule technique qui s'est avérée efficace pour créer des logiciels fiables. De nombreux échecs importants dans le développement de logiciels peuvent être attribués à l'insuffisance ou à l'absence totale de tests.
-
-• Pourquoi utiliser PyTest ? NEW QUESTION
-
-. Très facile à prendre en main grâce à sa syntaxe simple et facile.
-. Peut exécuter des tests en parallèle.
-. Peut exécuter un test spécifique ou un sous-ensemble de tests.
-. Détection automatique des tests
-. Sauter des tests
-. Source ouverte
+- Très facile à prendre en main grâce à sa syntaxe simple et facile.
+- Peut exécuter des tests en parallèle.
+- Peut exécuter un test spécifique ou un sous-ensemble de tests.
+- Détection automatique des tests
+- Sauter des tests
+- Open source
 
 
+====== Différences entre test unitaire et test d’intégration ? ======
+====== Expliquer comment fonction pytest. ======
+====== Expliquer ce que sont les fixtures. ======
 
-•	Différences entre test unitaire et test d’intégration ?
-•	Expliquer comment fonction pytest.
-•	Expliquer ce que sont les fixtures.
 
-Questions et points à aborder ou à traiter dans le script :
-•	Construire des tests unitaires et d’intégration pour le script du mini-projet « Mots anglais dans le protéome humain ».
+      ----------------------------------------- Questions et points à aborder ou à traiter dans le script : -----------------------------------------
 
-Contraintes : 
-•	Utilisation de la bibliothèque pytest.
+Construire des tests unitaires et d’intégration pour le script du mini-projet « Mots anglais dans le protéome humain ».
 
-Livrables : 
-•	Un notebook Jupyter (tuto.ipynb).
-•	Un script Python (words_in_proteome.py) qui implémente le mini-projet « Mots anglais dans le protéome humain ».
-•	Un script Python (demo.py) qui implémente les différents tests
 
-Ressources :
-•	vidéo : PyTest Tutorial.
-•	article de blog : Testing Python Applications with Pytest.
-•	script du mini-projet : « Mots anglais dans le protéome humain ».
+                                  ----------------------------------------- Livrables ----------------------------------------- 
+
+- Un notebook Jupyter (tuto.ipynb).
+- Un script Python (words_in_proteome.py) qui implémente le mini-projet « Mots anglais dans le protéome humain ».
+- Un script Python (demo.py) qui implémente les différents tests
+
