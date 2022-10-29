@@ -4,9 +4,8 @@
    calcul ou un object. Un exemple d'utilisation des fixture,
    un exemple de récuperation d'exception par pytest.raises et
    et de parametrize fonction.
-   Si l'on test ce script avec pytest on aura .F...F ou les
-   echecs (les  F) correspondent à l'erreur récuprerer par
-   pytest.raises et par un test raté dans l'example de pytest.
+   Si l'on test ce script avec pytest on aura .....F ou les
+   echecs (les  F) et par un test raté dans l'example de pytest.
    mark.parametrize.
 
 Usage :
@@ -59,14 +58,13 @@ def test_assert_addition():
 def test_exception():
     """Demonstration de l'utilisation de pytest.raise().
 
-    Récuperation de l'exception soulevé par l'inexistance
-    d'un fichier lorsque l'on souhaite l'ouvrir avec la
-    methode raise de pytest.
+    Récuperation de l'exception soulevé par la division
+    par zéro via la methode raise de pytest, l'exception
+    n'est pas récuperer, valide le test.
     """
-    with pytest.raises(FileNotFoundError) as my_exception:
-        with open("je suis un fichier qui n'existe pas", 'r', encoding="utf8"):
-            print("Enfait si j'existe")
-    assert "Fichier inexistant" in str(my_exception.value)
+    with pytest.raises(ZeroDivisionError):
+        2 / 0
+    assert True
 
 
 @pytest.fixture(name="comp")
@@ -81,13 +79,19 @@ def test_compteur_init(comp):
 
 
 def test_compteur_plus(comp):
-    """Teste la methose val_plus de compteur."""
+    """Teste la:w
+    methose val_plus de compteur."""
     comp.val_plus(5)
     assert comp.get_val == 5
 
 
-@pytest.mark.parametrize("valeurs_test, resultat_attendu", [("1+1", 2),
-                                                            ("1+1", 3)])
+@pytest.mark.parametrize(
+    "valeurs_test, resultat_attendu",
+    [
+        ("1+1", 2),
+        ("1+1", 3)
+    ]
+)
 def test_eval(valeurs_test, resultat_attendu):
     """Test si les valeurs_test donne resultat_attendu.
 
