@@ -9,4 +9,3 @@ class Accumulator:
 
     def add(self, more=1):
         self._count += more
-

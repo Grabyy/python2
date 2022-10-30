@@ -7,7 +7,6 @@ __license__ = "BSD 3-Clause"
 
 
 import sys
-import pytest
 
 
 def read_words(filename):
@@ -100,18 +99,6 @@ def find_most_frequent_word(freq_dict):
     for word in freq_dict:
         if freq_dict[word] == maxi:
             print(f"=> {word} found in {maxi} sequences")
-
-
-@pytest.mark.parametrize(
-    "filename, extension",
-    [
-        (sys.argv[2], ".txt"),
-        (sys.argv[3], ".txt")
-    ]
-)
-def test_extention_fichier(filename, extension):
-    assert filename.endswith(
-        extension), f"{filename} n'est pas un fichier {extension}"
 
 
 if __name__ == "__main__":
