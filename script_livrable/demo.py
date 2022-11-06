@@ -19,7 +19,6 @@ __contact__ = ("Mails")
 __date__ = "21102022"
 __version__ = "python_3.9"
 
-from ast import literal_eval
 import pytest
 
 
@@ -58,13 +57,12 @@ def test_assert_addition():
 def test_exception():
     """Demonstration de l'utilisation de pytest.raise().
 
-    Récuperation de l'exception soulevé par la division
-    par zéro via la methode raise de pytest, l'exception
-    n'est pas récuperer, valide le test.
+    Verification de l'exception soulevé par la division
+    par zéro via la methode raise de pytest.
     """
-    with pytest.raises(ZeroDivisionError):
+    with pytest.raises(ZeroDivisionError) as mon_ex:
         2 / 0
-    assert True
+    assert "division par zero" in str(mon_ex.value)
 
 
 @pytest.fixture(name="comp")
@@ -79,28 +77,27 @@ def test_compteur_init(comp):
 
 
 def test_compteur_plus(comp):
-    """Teste la:w
-    methose val_plus de compteur."""
+    """Teste la methode val_plus de compteur."""
     comp.val_plus(5)
     assert comp.get_val == 5
 
 
 @pytest.mark.parametrize(
-    "valeurs_test, resultat_attendu",
+    "valeurs_test_1, valeurs_test_2, resultat_attendu",
     [
-        ("1+1", 2),
-        ("1+1", 3)
+        (1, 1, 2),
+        (1, 1, 3)
     ]
 )
-def test_eval(valeurs_test, resultat_attendu):
+def test_eval(valeurs_test_1, valeurs_test_2, resultat_attendu):
     """Test si les valeurs_test donne resultat_attendu.
 
     Utilise comme argument les valeur initialiser avec le
     decorator pytest.mark.parametrize et effectue les test
     un a un avec ces valeurs.
     """
-    assert literal_eval(valeurs_test) == resultat_attendu
+    assert (valeurs_test_1 + valeurs_test_2) == resultat_attendu
 
 
 if __name__ == "__main__":
-    print("")
+    pass

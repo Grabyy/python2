@@ -1,3 +1,5 @@
+"""Programme de test pour le mini projet words_in_proteome"""
+
 import pytest
 import words_in_proteome as word
 
@@ -21,10 +23,14 @@ def test_extention_fichier(filename, extention, request):
 def test_read_words(file1):
     """Test le retour des fonctions"""
     result = word.read_words(file1)
-    assert (result is not None) and (type(result) == list)
+    assert (result is not None) and (isinstance(result, list))
 
 
 def test_read_sequences(file2):
     """Test le retour des fonctions"""
     result = word.read_sequences(file2)
-    assert (result is not None) and (type(result) == dict)
+    assert (result is not None) and (isinstance(result, dict))
+
+
+if __name__ == "__main__":
+    pass
