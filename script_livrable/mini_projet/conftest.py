@@ -1,13 +1,12 @@
 """Script de configuration pour tester word_in_proteome.py.
 
-    Deux arguments de pytest dont définie, --file1 et --file2.
-    Ils permettent de crée des fixture qui nous aideront à tester
-    si le code du mini project fonctionne avec des fichier.
-    spécifiques
+    Deux arguments de pytest sont définie, --file1 et --file2.
+    Ils permettent de créer des fixtures qui nous aideront à tester
+    le code du mini projet fonctionne avec des fichiers spécifiques.
 
 Usage :
 ======
-    python demo.py
+    python conftest.py
 
 """
 
@@ -21,14 +20,21 @@ import pytest
 
 
 def pytest_addoption(parser):
-    """Définie deux nouveaux arguments pour pytest."""
+    """Définie deux nouvelles options pour pytest.
+
+    option : --file1 & --file2
+    """
     parser.addoption("--file1", action="store")
     parser.addoption("--file2", action="store")
 
 
 @pytest.fixture(scope='session')
 def file1(request):
-    """Création d'une fixture pour --file1."""
+    """Création d'une fixture pour --file1.
+
+    Récupère le fichier donné dans l'arguments --file1,
+    et crée une fixture qui permet d'y accéder.
+    """
     filename = request.config.option.file1
     if filename is None:
         pytest.skip()
@@ -37,7 +43,11 @@ def file1(request):
 
 @pytest.fixture(scope='session')
 def file2(request):
-    """Création d'une fixture pour --file2."""
+    """Création d'une fixture pour --file2.
+
+    Récupère le fichier donné dans l'arguments --file2,
+    et crée une fixture qui permet d'y accéder.
+    """
     filename = request.config.option.file2
     if filename is None:
         pytest.skip()

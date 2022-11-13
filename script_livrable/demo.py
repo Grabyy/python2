@@ -1,12 +1,10 @@
-"""Présente différentes possiblité offerte par le module pytest.
+"""Présente différentes possibilités offerte par le module pytest.
 
-   On peut y voir démontrer des test unitaire basique sur des
-   calcul ou un object. Un exemple d'utilisation des fixture,
-   un exemple de récuperation d'exception par pytest.raises et
-   et de parametrize fonction.
-   Si l'on test ce script avec pytest on aura .....F ou les
-   echecs (les  F) et par un test raté dans l'example de pytest.
-   mark.parametrize.
+   On peut y voir des tests unitaires basiques sur des scalaires ou un
+   objet. Un exemple d'utilisation des fixtures, un exemple de test
+   d'exception par pytest.raises et un exemple de parametrize fonction.
+   Si l'on test ce script avec pytest on aura .....F où l'echec (le  F)
+   et par un test raté dans l'example de pytest.mark.parametrize.
 
 Usage :
 ======
@@ -30,18 +28,24 @@ class Compteur:
     """
 
     def __init__(self):
-        """Initialise l'atribut val à 0."""
+        """Constructeur de Compteur.
+
+        Initialise l'attribut _val à 0.
+        """
         self._val = 0
 
     @property
     def get_val(self):
-        """Renvoi l'attribut val."""
+        """Accesseur de l'attribut valeur.
+
+        Renvoi l'attribut _val.
+        """
         return self._val
 
     def val_plus(self, ajout=1):
-        """Ajoute la valeur de ajout a val.
+        """Setteur de l'attribut val.
 
-        Par défaut, ajout vaut 1.
+        Ajoute la valeur de ajout à val, par défaut, ajout vaut 1.
         """
         self._val += ajout
 
@@ -57,27 +61,26 @@ def test_assert_addition():
 def test_exception():
     """Demonstration de l'utilisation de pytest.raise().
 
-    Verification de l'exception soulevé par la division
-    par zéro via la methode raise de pytest.
+    Vérification de l'exception soulevée par la division
+    par zéro via la méthode raise de pytest.
     """
-    with pytest.raises(ZeroDivisionError) as mon_ex:
-        2 / 0
-    assert "division par zero" in str(mon_ex.value)
+    with pytest.raises(ZeroDivisionError):
+        print(2 / 0)
 
 
 @pytest.fixture(name="comp")
 def fixture_comp():
-    """Instanciation d'un compteur grace au decorator fixture."""
+    """Instanciation d'un compteur grâce au décorateur fixture."""
     return Compteur()
 
 
 def test_compteur_init(comp):
-    """Teste si le compteur s'initialise a 0."""
+    """Teste si le compteur s'initialise à 0."""
     assert comp.get_val == 0
 
 
 def test_compteur_plus(comp):
-    """Teste la methode val_plus de compteur."""
+    """Teste la méthode val_plus de compteur."""
     comp.val_plus(5)
     assert comp.get_val == 5
 
@@ -92,9 +95,9 @@ def test_compteur_plus(comp):
 def test_eval(valeurs_test_1, valeurs_test_2, resultat_attendu):
     """Test si les valeurs_test donne resultat_attendu.
 
-    Utilise comme argument les valeur initialiser avec le
-    decorator pytest.mark.parametrize et effectue les test
-    un a un avec ces valeurs.
+    Utilise comme argument les valeurs initialisées avec le
+    decorateur pytest.mark.parametrize et effectue les tests
+    un à un avec ces valeurs.
     """
     assert (valeurs_test_1 + valeurs_test_2) == resultat_attendu
 
